@@ -6,8 +6,8 @@ interface CardProps {
   children: React.ReactNode;
 }
 
-export default function card({ width, height, children }: CardProps) {
+export const Card: React.FC<CardProps> = ({ width, height, children }) => {
   return (
     <div style={{ width, height, border: "3px solid gray" }}>{children}</div>
   );
-}
+};

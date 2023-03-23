@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./components/card";
+import { Card } from "./components/Card";
 
 export default function App() {
   return (
@@ -9,6 +9,7 @@ export default function App() {
         height="200px"
       >
         <button>Клик</button>
+        <div>Save</div>
       </Card>
     </div>
   );
