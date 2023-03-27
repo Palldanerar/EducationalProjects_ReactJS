@@ -1,3 +1,9 @@
 const express = require("express");
 
-const POST = process.env.POST || 5000;
+const PORT = process.env.POST || 8080;
+
+const app = express();
+
+app.listen(PORT, () => {
+  console.log("Мой первый сервер!");
+});
