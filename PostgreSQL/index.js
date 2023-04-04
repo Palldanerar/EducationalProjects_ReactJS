@@ -6,7 +6,7 @@ const PORT = process.env.POST || 8080;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Мой первывй сервер!");
+  res.send("Мой первый сервер!");
 });
 
 app.use(express.json());
