@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
   res.send("Мой первывй сервер!");
 });
 
+app.use(express.json());
 app.use("/api", userRouter);
 
 app.listen(PORT, () => {
