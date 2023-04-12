@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { createPost, getPost } from "./api/requests";
 
 function App() {
