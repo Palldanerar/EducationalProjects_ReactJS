@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getPost } from "./api/requests";
+import { createPost, getPost } from "./api/requests";
 
 function App() {
   useEffect(() => {
+    createPost();
     getPost();
   }, []);
 
