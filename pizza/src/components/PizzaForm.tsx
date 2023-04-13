@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import Pizza from "../models/Pizza";
 import "./style.css";
 
 const initState = {
@@ -7,7 +8,11 @@ const initState = {
   img: "",
 };
 
-const PizzaForm: FC = () => {
+interface addPizzaProps {
+  addPizza: (newPizza: Pizza) => void;
+}
+
+const PizzaForm: FC<addPizzaProps> = ({ addPizza }) => {
   const [newPizza, setNewPizza] = useState<{
     title: string;
     price: string;
@@ -25,7 +30,17 @@ const PizzaForm: FC = () => {
   const handleSubmit = (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
 
-    console.log(newPizza);
+    const { title, price, img } = newPizza;
+
+    if (title && price && img) {
+      addPizza({
+        title,
+        img,
+        price: Number(price),
+        id: Date.now(),
+      });
+      setNewPizza(initState);
+    }
   };
 
   return (
