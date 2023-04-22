@@ -1,6 +1,19 @@
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import FavoritePage from "./pages/FavoritePage";
+
 const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline text-red-200">Hello world!</h1>
+    <Routes>
+      <Route
+        path="/"
+        element={<HomePage />}
+      />
+      <Route
+        path="/favorite"
+        element={<FavoritePage />}
+      />
+    </Routes>
   );
 };
 
