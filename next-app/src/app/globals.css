@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.dfoot {
+    flex: 0, 0, auto;
+}
